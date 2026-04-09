@@ -81,8 +81,8 @@ export default function App() {
 
       <TopBar activeTab={activeTab} onTabChange={setActiveTab} onRefresh={refreshAll} />
 
-      <main className={`flex-1 grid gap-2 p-2 overflow-auto auto-rows-fr ${GRID_CLASS[activeTab]}`}
-            style={{ minHeight: 0 }}>
+      <main className={`flex-1 grid gap-2 p-2 overflow-y-auto ${GRID_CLASS[activeTab]}`}
+            style={{ minHeight: 0, alignContent: 'start' }}>
         <TabContent tab={activeTab} />
       </main>
 
