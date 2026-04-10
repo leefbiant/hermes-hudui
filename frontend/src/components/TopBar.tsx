@@ -12,6 +12,7 @@ export const TABS = [
   { id: 'agents', label: 'Agents', key: '8' },
   { id: 'profiles', label: 'Profiles', key: '9' },
   { id: 'token-costs', label: 'Costs', key: '0' },
+  { id: 'chat', label: 'Chat', key: 'c' },
 ] as const
 
 export type TabId = typeof TABS[number]['id']
@@ -49,6 +50,11 @@ export default function TopBar({ activeTab, onTabChange, onRefresh }: TopBarProp
       // 0 for last tab
       if (e.key === '0') {
         onTabChange('token-costs')
+        return
+      }
+      // C for chat
+      if (e.key === 'c') {
+        onTabChange('chat')
         return
       }
       // R to refresh

@@ -4,5 +4,5 @@ import sys
 sys.path.insert(0, '/data/hermes-hudui')
 import uvicorn, os
 os.environ['HERMES_HOME'] = '/root/.hermes'
-uvicorn.run('backend.main:app', host='127.0.0.1', port=3001)
+uvicorn.run('backend.main:app', host='0.0.0.0', port=3001)
 "

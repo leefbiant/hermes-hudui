@@ -14,6 +14,7 @@ import HealthPanel from './components/HealthPanel'
 import AgentsPanel from './components/AgentsPanel'
 import ProfilesPanel from './components/ProfilesPanel'
 import TokenCostsPanel from './components/TokenCostsPanel'
+import ChatPanel from './components/ChatPanel'
 
 function TabContent({ tab }: { tab: TabId }) {
   switch (tab) {
@@ -27,6 +28,7 @@ function TabContent({ tab }: { tab: TabId }) {
     case 'agents': return <AgentsPanel />
     case 'profiles': return <ProfilesPanel />
     case 'token-costs': return <TokenCostsPanel />
+    case 'chat': return <ChatPanel />
     default: return <DashboardPanel />
   }
 }
@@ -43,6 +45,7 @@ const GRID_CLASS: Record<TabId, string> = {
   agents: 'grid-cols-1 lg:grid-cols-2',
   profiles: 'grid-cols-1',
   'token-costs': 'grid-cols-1 lg:grid-cols-2',
+  'chat': 'grid-cols-1',
 }
 
 export default function App() {
